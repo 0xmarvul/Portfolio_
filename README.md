@@ -1,4 +1,4 @@
-# 0xmarvul - Cyberpunk Portfolio
+# 0xMarvul - Cyberpunk Portfolio
 
 🎮 A glitchy, cyberpunk-themed portfolio showcasing cybersecurity skills, bug bounty achievements, and professional experience.
 
@@ -57,7 +57,7 @@ The bug bounty hunting duration automatically calculates from **August 1, 2025**
 
 ## 🌐 Live Demo
 
-Visit: [https://0xmarvul.github.io](https://0xmarvul.github.io)
+Visit: [https://0xmarvul.github.io](https://0xmarvul.github.io/Portfolio_/)
 
 ## 📧 Contact
 
@@ -67,6 +67,6 @@ Visit: [https://0xmarvul.github.io](https://0xmarvul.github.io)
 
 ---
 
-**Designed & Built by 0xmarvul** | © 2025 Marwan Khodair
+**Designed & Built by 0xMarvul** | © 2025 Marwan Khodair
 
 *"Hack the planet, secure the web"* 💀⚡
