@@ -21,7 +21,7 @@
     --terminal-bg: rgba(10, 10, 10, 0.95);
     --glow-cyan: 0 0 10px var(--cyan), 0 0 20px var(--cyan), 0 0 30px var(--cyan);
     --glow-magenta: 0 0 10px var(--magenta), 0 0 20px var(--magenta);
-    --glow-green: 0 0 10px var(--green), 0 0 20px var(--green);
+    --glow-green: 0 0 5px var(--green), 0 0 10px var(--green);
 }
 
 body {
@@ -205,13 +205,13 @@ body {
 }
 
 .glitch-text::before {
-    color: var(--cyan);
+    color: var(--green);
     animation: glitch-before 0.3s infinite;
     clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
 }
 
 .glitch-text::after {
-    color: var(--magenta);
+    color: var(--green);
     animation: glitch-after 0.3s infinite;
     clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
 }
