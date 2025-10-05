@@ -1,4 +1,4 @@
-// Matrix Rain Effect - MORE VISIBLE BUT STILL CALM
+// Matrix Rain Effect - WITH CALMER COLORS
 const canvas = document.getElementById('matrix-canvas');
 const ctx = canvas.getContext('2d');
 
@@ -18,21 +18,14 @@ function drawMatrix() {
     ctx.fillStyle = 'rgba(10, 10, 10, 0.05)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     
-    // Made it more visible - added some transparency variation
-    ctx.fillStyle = 'rgba(77, 184, 184, 0.8)'; // More visible cyan with 80% opacity
+    // Changed from bright #00ffff to calmer #4db8b8
+    ctx.fillStyle = '#4db8b8';
     ctx.font = fontSize + 'px monospace';
     
     for (let i = 0; i < drops.length; i++) {
         const char = matrixChars[Math.floor(Math.random() * matrixChars.length)];
         const x = i * fontSize;
         const y = drops[i] * fontSize;
-        
-        // Add gradient effect - brighter at the head
-        const gradient = ctx.createLinearGradient(x, y - 20, x, y);
-        gradient.addColorStop(0, 'rgba(77, 184, 184, 0)');
-        gradient.addColorStop(0.5, 'rgba(77, 184, 184, 0.8)');
-        gradient.addColorStop(1, 'rgba(77, 184, 184, 1)');
-        ctx.fillStyle = gradient;
         
         ctx.fillText(char, x, y);
         
@@ -49,12 +42,6 @@ setInterval(drawMatrix, 50);
 window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    // Reinitialize drops array
-    drops.length = 0;
-    const newColumns = canvas.width / fontSize;
-    for (let i = 0; i < newColumns; i++) {
-        drops[i] = Math.random() * -100;
-    }
 });
 
 // Smooth Scroll Navigation
@@ -197,8 +184,10 @@ const statCards = document.querySelectorAll('.stat-card');
 setInterval(() => {
     const randomCard = statCards[Math.floor(Math.random() * statCards.length)];
     if (randomCard) {
+        // Changed from bright #ff00ff to calmer #b84db8
         randomCard.style.borderColor = '#b84db8';
         setTimeout(() => {
+            // Changed from bright #00ffff to calmer #4db8b8
             randomCard.style.borderColor = '#4db8b8';
         }, 200);
     }
