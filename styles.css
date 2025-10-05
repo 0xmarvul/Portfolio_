@@ -1,6 +1,3 @@
-/* Cyberpunk Portfolio Styles - Calm Version */
-
-/* Reset & Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +5,7 @@
 }
 
 :root {
-    /* Softer, more muted colors */
+
     --cyan: #4db8b8;
     --magenta: #b84db8;
     --green: #4db84d;
@@ -20,7 +17,7 @@
     --medium-gray: #2a2a2a;
     --light-gray: #999;
     --terminal-bg: rgba(10, 10, 10, 0.95);
-    /* Reduced glow intensity */
+ 
     --glow-cyan: 0 0 5px rgba(77, 184, 184, 0.3), 0 0 10px rgba(77, 184, 184, 0.2);
     --glow-magenta: 0 0 5px rgba(184, 77, 184, 0.3), 0 0 10px rgba(184, 77, 184, 0.2);
     --glow-green: 0 0 5px rgba(77, 184, 77, 0.3), 0 0 10px rgba(77, 184, 77, 0.2);
@@ -35,18 +32,16 @@ body {
     position: relative;
 }
 
-/* Matrix Canvas Background */
-#matrix-canvas {
+ #matrix-canvas {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
-    opacity: 1;
+    opacity: 0.15;
 }
 
-/* Scrollbar Styling */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -60,7 +55,6 @@ body {
     box-shadow: 0 0 3px rgba(77, 184, 184, 0.3);
 }
 
-/* Navigation */
 .nav {
     position: fixed;
     top: 0;
@@ -122,7 +116,6 @@ body {
     width: 100%;
 }
 
-/* Hero Section */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -333,8 +326,7 @@ body {
     color: var(--dark-bg);
 }
 
-/* Sections */
-.section {
+ .section {
     padding: 6rem 2rem;
     position: relative;
 }
@@ -365,8 +357,7 @@ body {
     text-align: center;
 }
 
-/* Terminal Box */
-.terminal-box {
+ .terminal-box {
     background: var(--terminal-bg);
     border: 2px solid var(--cyan);
     border-radius: 8px;
@@ -429,8 +420,7 @@ body {
     font-weight: bold;
 }
 
-/* Stats Grid */
-.stats-grid {
+ .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
@@ -477,8 +467,7 @@ body {
     color: var(--light-gray);
 }
 
-/* Domains Section */
-.domains-section {
+ .domains-section {
     margin-top: 3rem;
 }
 
@@ -505,8 +494,7 @@ body {
     box-shadow: 0 0 10px rgba(77, 184, 77, 0.3);
 }
 
-/* Experience Section */
-.experience-item {
+ .experience-item {
     margin-bottom: 2rem;
 }
 
@@ -538,8 +526,7 @@ body {
     font-size: 1.2rem;
 }
 
-/* Projects Section */
-.project-card {
+ .project-card {
     margin-bottom: 2rem;
 }
 
@@ -569,8 +556,7 @@ body {
     position: relative;
 }
 
-/* Skills Section */
-.skills-grid {
+ .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
@@ -612,8 +598,7 @@ body {
     transform: scale(1.05);
 }
 
-/* Certifications */
-.certifications-section {
+ .certifications-section {
     margin-top: 3rem;
 }
 
@@ -650,8 +635,7 @@ body {
     margin-left: 1rem;
 }
 
-/* Contact Section */
-.contact-container {
+ .contact-container {
     max-width: 600px;
     margin: 0 auto;
 }
@@ -691,8 +675,7 @@ body {
     text-shadow: 0 0 5px rgba(184, 77, 184, 0.3);
 }
 
-/* Footer */
-.footer {
+ .footer {
     background: var(--dark-gray);
     padding: 2rem;
     text-align: center;
@@ -709,8 +692,7 @@ body {
     font-size: 0.9rem;
 }
 
-/* Fade-in Animation */
-.fade-in {
+ .fade-in {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s, transform 0.6s;
@@ -721,8 +703,7 @@ body {
     transform: translateY(0);
 }
 
-/* Glitch Effect for Headings */
-.glitch {
+ .glitch {
     position: relative;
     display: inline-block;
 }
@@ -774,7 +755,6 @@ body {
     }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -800,7 +780,6 @@ body {
     }
 }
 
-/* Terminal Cursor Animation */
 .terminal-cursor {
     display: inline-block;
     width: 10px;
