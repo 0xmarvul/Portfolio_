@@ -1,47 +1,64 @@
-// Matrix Rain Effect - WITH CALMER COLORS
+// Matrix Rain Effect - FIXED VERSION WITH MORE VISIBLE CHARACTERS
 const canvas = document.getElementById('matrix-canvas');
 const ctx = canvas.getContext('2d');
 
+// Set canvas size
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+// Matrix characters
 const matrixChars = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-const fontSize = 14;
-const columns = canvas.width / fontSize;
+const fontSize = 16; // Increased from 14 to 16 for better visibility
+const columns = Math.floor(canvas.width / fontSize);
 const drops = [];
 
+// Initialize drops
 for (let i = 0; i < columns; i++) {
-    drops[i] = Math.random() * -100;
+    drops[i] = Math.floor(Math.random() * -100);
 }
 
 function drawMatrix() {
+    // Semi-transparent black background to create trail effect
     ctx.fillStyle = 'rgba(10, 10, 10, 0.05)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     
-    // Changed from bright #00ffff to calmer #4db8b8
-    ctx.fillStyle = '#4db8b8';
+    // Set the text color and font
+    ctx.fillStyle = '#4db8b8'; // Calm cyan color
     ctx.font = fontSize + 'px monospace';
     
+    // Draw characters
     for (let i = 0; i < drops.length; i++) {
         const char = matrixChars[Math.floor(Math.random() * matrixChars.length)];
         const x = i * fontSize;
         const y = drops[i] * fontSize;
         
+        // Draw the character
         ctx.fillText(char, x, y);
         
+        // Reset drop to top randomly after it reaches bottom
         if (y > canvas.height && Math.random() > 0.975) {
             drops[i] = 0;
         }
+        
+        // Increment Y coordinate
         drops[i]++;
     }
 }
 
+// Run the animation
 setInterval(drawMatrix, 50);
 
 // Resize canvas on window resize
 window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    
+    // Recalculate columns and reinitialize drops
+    const newColumns = Math.floor(canvas.width / fontSize);
+    drops.length = 0;
+    for (let i = 0; i < newColumns; i++) {
+        drops[i] = Math.floor(Math.random() * -100);
+    }
 });
 
 // Smooth Scroll Navigation
@@ -184,10 +201,8 @@ const statCards = document.querySelectorAll('.stat-card');
 setInterval(() => {
     const randomCard = statCards[Math.floor(Math.random() * statCards.length)];
     if (randomCard) {
-        // Changed from bright #ff00ff to calmer #b84db8
         randomCard.style.borderColor = '#b84db8';
         setTimeout(() => {
-            // Changed from bright #00ffff to calmer #4db8b8
             randomCard.style.borderColor = '#4db8b8';
         }, 200);
     }
