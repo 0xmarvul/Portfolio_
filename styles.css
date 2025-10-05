@@ -43,7 +43,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    opacity: 0.08;
+    opacity: 0.25;
 }
 
 /* Scrollbar Styling */
