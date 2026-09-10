@@ -14,7 +14,7 @@
 
 ---
 
-Personal portfolio website for **Marwan Khodair (0xMarvul)** — security researcher and bug bounty hunter with 30+ accepted vulnerability disclosures across Yahoo, AT&T, IBM, the U.S. Department of Defense, and more.
+Security researcher and bug bounty hunter with 30+ accepted vulnerability disclosures across Yahoo, AT&T, IBM, the U.S. Department of Defense, and more.
 
 Built with vanilla HTML, CSS, and JavaScript. Features a terminal-style UI with matrix rain, CRT scanlines, and glitch effects.
 
